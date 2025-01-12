@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.samdevweb.apiopenfeign.dto.CovidDTO;
 
-@FeignClient(name = "covid-api", url = "https://covid19-brazil-api.now.sh/api/report/v1")
+@FeignClient(name = "covid-api", url = "https://covid19-brazil-api.vercel.app/api/report/v1/brazil/uf")
 public interface CovidAPI {
     
-    @GetMapping("/brazil/uf/{uf}")
+    @GetMapping("/{uf}")
     CovidDTO getInfoByUF(@PathVariable String uf);
 
 }

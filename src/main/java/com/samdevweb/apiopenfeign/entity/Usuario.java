@@ -28,6 +28,7 @@ public class Usuario {
     private String bairro;
     private String cidade;
     private String estado;
+    private String uf;
 
     @Column(name = "data_registro")
     private LocalDateTime dataRegistro;

@@ -21,6 +21,7 @@ public class UsuarioResponseDTO {
     private String bairro;
     private String cidade;
     private String estado;
+    private String uf;
 
     private CovidDTO covidInfo;
 

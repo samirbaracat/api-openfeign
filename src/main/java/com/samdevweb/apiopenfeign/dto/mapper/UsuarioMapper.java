@@ -15,7 +15,9 @@ public class UsuarioMapper {
         usuarioResponseDTO.setBairro(usuario.getBairro());
         usuarioResponseDTO.setCidade(usuario.getCidade());
         usuarioResponseDTO.setEstado(usuario.getEstado());
+        usuarioResponseDTO.setUf(usuario.getUf());
         usuarioResponseDTO.setDataRegistro(usuario.getDataRegistro());
         return usuarioResponseDTO;
     }
+    
 }

@@ -31,7 +31,7 @@ public class UsuarioService {
                 .stream()
                 .map(usuario -> {
                     UsuarioResponseDTO dto = UsuarioMapper.toUsuarioResponseDTO(usuario);
-                    dto.setCovidInfo(covidAPI.getInfoByUF(usuario.getEstado()));
+                    dto.setCovidInfo(covidAPI.getInfoByUF(usuario.getUf()));
                     return dto;
                 }).collect(Collectors.toList());
     }
@@ -40,7 +40,7 @@ public class UsuarioService {
         return usuarioRepository.findById(id)
                 .map(usuario -> {
                     UsuarioResponseDTO dto = UsuarioMapper.toUsuarioResponseDTO(usuario);
-                    dto.setCovidInfo(covidAPI.getInfoByUF(usuario.getEstado()));
+                    dto.setCovidInfo(covidAPI.getInfoByUF(usuario.getUf()));
                     return dto;
                 }).orElseThrow();
     }
