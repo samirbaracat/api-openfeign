@@ -12,25 +12,25 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "user")
-public class User {
+@Table(name = "usuario")
+public class Usuario {
     
     @Id
     private String id;
 
-    private String name;
+    private String nome;
     private String email;
 
-    @Column(name = "zip_code")
-    private String zipCode;
+    @Column(name = "cep")
+    private String cep;
 
-    private String address;
-    private String district;
-    private String city;
-    private String state;
+    private String endereco;
+    private String bairro;
+    private String cidade;
+    private String estado;
 
-    @Column(name = "created_at")
-    private LocalDateTime createdAt;
+    @Column(name = "data_registro")
+    private LocalDateTime dataRegistro;
 
 
 }
