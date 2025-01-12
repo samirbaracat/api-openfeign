@@ -36,7 +36,7 @@ public class UsuarioService {
                 }).collect(Collectors.toList());
     }
 
-    public UsuarioResponseDTO findByWithCovidInfo(String id) {
+    public UsuarioResponseDTO findByIdWithCovidInfo(String id) {
         return usuarioRepository.findById(id)
                 .map(usuario -> {
                     UsuarioResponseDTO dto = UsuarioMapper.toUsuarioResponseDTO(usuario);
