@@ -24,7 +24,7 @@ public class Usuario {
     @Column(name = "cep")
     private String cep;
 
-    private String endereco;
+    private String logradouro;
     private String bairro;
     private String cidade;
     private String estado;
